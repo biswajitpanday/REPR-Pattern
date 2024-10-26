@@ -10,7 +10,6 @@ This repository showcases the implementation of the REPR pattern in .NET using t
 - [Usage](#usage)
 - [Code Structure](#code-structure)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
@@ -46,7 +45,7 @@ The REPR (Read-Entity-Persist-Response) pattern enhances the API development pro
    ```bash
    dotnet build
    ```
-### Usage
+## Usage
 1. Run the application:
     ```bash
    dotnet run
@@ -54,11 +53,11 @@ The REPR (Read-Entity-Persist-Response) pattern enhances the API development pro
 3. Open your browser and navigate to http://localhost:{port}/swagger to explore the API using Swagger UI.
 4. Test the API endpoints as described in the blog post.
 
-### Code Structure
+## Code Structure
 - /Models: Contains the data models used in the application.
 - /Endpoints: Contains the FastEndpoints definitions implementing the REPR pattern.
 - /Services: Contains the services for data access and business logic.
 - /Program.cs: Entry point of the application.
 
-### Contributing
+## Contributing
 Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
