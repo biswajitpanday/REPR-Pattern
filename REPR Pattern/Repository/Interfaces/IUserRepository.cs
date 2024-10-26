@@ -4,5 +4,5 @@ public interface IUserRepository
 {
     Task<List<UserEntity>> GetAllUser();
     Task<UserEntity?> GetByUserId(Guid id);
-    Task<UserEntity> StoreUser(UserEntity user);
+    Task<UserEntity> CreateUser(UserEntity user);
 }

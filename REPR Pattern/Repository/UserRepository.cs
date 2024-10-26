@@ -17,7 +17,7 @@ public class UserRepository : IUserRepository
         return await Task.Run(() => user);
     }
 
-    public async Task<UserEntity> StoreUser(UserEntity user)
+    public async Task<UserEntity> CreateUser(UserEntity user)
     {
         var users = GetData();
         var isExist = users.FirstOrDefault(x => x.Id == user.Id);
@@ -69,7 +69,7 @@ public class UserRepository : IUserRepository
 
 public class UserEntity
 {
-    public Guid Id { get; set; }
+    public Guid? Id { get; set; }
     public required string FirstName { get; set; }
     public string? LastName { get; set; }
     public DateTime DateOfBirth { get; set; }
