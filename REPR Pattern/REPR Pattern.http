@@ -1,6 +1,0 @@
-@REPR_Pattern_HostAddress = http://localhost:5179
-
-GET {{REPR_Pattern_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

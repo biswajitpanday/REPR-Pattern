@@ -1,4 +1,5 @@
-﻿using FastEndpoints;
+﻿using System.Net;
+using FastEndpoints;
 using REPR_Pattern.Repository;
 using REPR_Pattern.Repository.Interfaces;
 using REPR_Pattern.Requests.Users;
@@ -12,10 +13,12 @@ public class UserPostEndpoint(IUserRepository userRepository) : Endpoint<CreateU
     {
         Post("api/users");
         AllowAnonymous();
+        DontThrowIfValidationFails();
     }
 
     public override async Task HandleAsync(CreateUserRequest req, CancellationToken ct)
     {
+        ThrowIfAnyErrors(statusCode: (int) HttpStatusCode.UnprocessableEntity);
         var userEntity = new UserEntity
         {
             FirstName = req.FirstName,
