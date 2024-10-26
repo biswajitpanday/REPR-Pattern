@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REPR Pattern", "REPR Pattern\REPR Pattern.csproj", "{E54F23B8-DE79-4D1F-B0E4-85E4A467D8CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E54F23B8-DE79-4D1F-B0E4-85E4A467D8CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E54F23B8-DE79-4D1F-B0E4-85E4A467D8CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E54F23B8-DE79-4D1F-B0E4-85E4A467D8CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E54F23B8-DE79-4D1F-B0E4-85E4A467D8CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0CB78518-CF3C-46ED-94DB-915E2FF0B5FE}
+	EndGlobalSection
+EndGlobal
