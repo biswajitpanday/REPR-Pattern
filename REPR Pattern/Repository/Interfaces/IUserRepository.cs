@@ -2,7 +2,7 @@
 
 public interface IUserRepository
 {
-    List<UserEntity> GetAllUser();
-    UserEntity? GetByUserId(Guid id);
-    UserEntity StoreUser(UserEntity user);
+    Task<List<UserEntity>> GetAllUser();
+    Task<UserEntity?> GetByUserId(Guid id);
+    Task<UserEntity> StoreUser(UserEntity user);
 }

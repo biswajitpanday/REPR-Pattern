@@ -4,29 +4,29 @@ namespace REPR_Pattern.Repository;
 
 public class UserRepository : IUserRepository
 {
-    public List<UserEntity> GetAllUser()
+    public async Task<List<UserEntity>> GetAllUser()
     {
         var users = GetData();
-        return users;
+        return await Task.Run(() => users);
     }
 
-    public UserEntity? GetByUserId(Guid id)
+    public async Task<UserEntity?> GetByUserId(Guid id)
     {
         var users = GetData();
         var user = users.FirstOrDefault(x => x.Id == id);
-        return user;
+        return await Task.Run(() => user);
     }
 
-    public UserEntity StoreUser(UserEntity user)
+    public async Task<UserEntity> StoreUser(UserEntity user)
     {
         var users = GetData();
         var isExist = users.FirstOrDefault(x => x.Id == user.Id);
         if (isExist != null)
             throw new Exception("User Already Exists.");
 
-        user.Id = new Guid();
+        user.Id = Guid.NewGuid();
         users.Add(user);
-        return user;
+        return await Task.Run(() => user);
     }
 
 
@@ -36,7 +36,7 @@ public class UserRepository : IUserRepository
         {
             new()
             {
-                Id = new Guid(),
+                Id = Guid.NewGuid(),
                 FirstName = "John",
                 LastName = "Doe",
                 DateOfBirth = DateTime.UtcNow.AddYears(-22),
@@ -45,7 +45,7 @@ public class UserRepository : IUserRepository
             },
             new()
             {
-                Id = new Guid(),
+                Id = Guid.NewGuid(),
                 FirstName = "Jane",
                 LastName = "Doe",
                 DateOfBirth = DateTime.UtcNow.AddYears(-20),
@@ -54,7 +54,7 @@ public class UserRepository : IUserRepository
             },
             new()
             {
-                Id = new Guid(),
+                Id = Guid.NewGuid(),
                 FirstName = "Biswajit",
                 LastName = "Panday",
                 DateOfBirth = DateTime.UtcNow.AddYears(-30),
@@ -70,9 +70,9 @@ public class UserRepository : IUserRepository
 public class UserEntity
 {
     public Guid Id { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
+    public required string FirstName { get; set; }
+    public string? LastName { get; set; }
     public DateTime DateOfBirth { get; set; }
-    public string Email { get; set; }
-    public string PhoneNumber { get; set; }
+    public required string Email { get; set; }
+    public string? PhoneNumber { get; set; }
 }
