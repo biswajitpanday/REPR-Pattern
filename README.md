@@ -34,8 +34,8 @@ The REPR (Read-Entity-Persist-Response) pattern enhances the API development pro
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/repo-name.git
-   cd repo-name
+   git clone https://github.com/biswajitpanday/REPR-Pattern
+   cd "REPR Pattern"
    ```
 2. Restore the dependencies:
    ```bash
