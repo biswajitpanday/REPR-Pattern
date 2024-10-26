@@ -36,7 +36,7 @@ public class UserRepository : IUserRepository
         {
             new()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("4c9ca0ce-f28e-4502-825e-ebb1015bfa3d"),
                 FirstName = "John",
                 LastName = "Doe",
                 DateOfBirth = DateTime.UtcNow.AddYears(-22),
@@ -45,7 +45,7 @@ public class UserRepository : IUserRepository
             },
             new()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("4fbd1ca0-dea7-4db4-9ef2-bbe365a049a7"),
                 FirstName = "Jane",
                 LastName = "Doe",
                 DateOfBirth = DateTime.UtcNow.AddYears(-20),
@@ -54,7 +54,7 @@ public class UserRepository : IUserRepository
             },
             new()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("68dd672e-39ee-4e12-b4b1-bc2d3f73708b"),
                 FirstName = "Biswajit",
                 LastName = "Panday",
                 DateOfBirth = DateTime.UtcNow.AddYears(-30),

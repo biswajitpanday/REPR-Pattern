@@ -5,20 +5,19 @@ using REPR_Pattern.Responses.Users;
 
 namespace REPR_Pattern.Endpoints.Users;
 
-// [HttpGet("api/books/{id}")]
+// [HttpGet("api/users/{id}")]
 // [AllowAnonymous]
 public class UserGetByIdEndpoint(IUserRepository userRepository) : Endpoint<UsersByIdRequest, UserByIdResponse>
 {
-    private readonly IUserRepository _userRepository = userRepository;
     public override void Configure()
     {
-        Get("api/books/{id}");
+        Get("api/users/{id}");
         AllowAnonymous();
     }
 
     public override async Task HandleAsync(UsersByIdRequest req, CancellationToken ct)
     {
-        var user = await _userRepository.GetByUserId(Guid.Parse(req.Id));
+        var user = await userRepository.GetByUserId(Guid.Parse(req.Id));
         if (user is null)
             await SendNotFoundAsync(ct);
         else
