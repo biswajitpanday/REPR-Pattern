@@ -51,7 +51,7 @@ The REPR (Read-Entity-Persist-Response) pattern enhances the API development pro
    dotnet run
    ```
 3. Open your browser and navigate to http://localhost:{port}/swagger to explore the API using Swagger UI.
-4. Test the API endpoints as described in the blog post.
+4. Test the API endpoints as described in the [blog post](https://medium.com/@biswajitpanday/elevate-your-net-apis-with-the-repr-pattern-and-fastendpoints-10c1b53e31b6).
 
 ## Code Structure
 - /Models: Contains the data models used in the application.
